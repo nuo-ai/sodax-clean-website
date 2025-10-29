@@ -1,0 +1,295 @@
+{
+  "Nav": {
+    "home": "首頁",
+    "about": "關於我們",
+    "services": "服務項目",
+    "contact": "聯繫我們"
+  },
+  "Actions": {
+    "getQuote": "獲取報價",
+    "switchToZh": "中文",
+    "switchToEn": "EN"
+  },
+  "Footer": {
+    "services": "服務項目",
+    "company": "公司資訊",
+    "contact": "聯繫方式",
+    "privacy": "隱私政策",
+    "terms": "服務條款",
+    "copyright": "© {year} Sodax Clean. 版權所有。",
+    "companyDescription": "值得信賴的專業清潔服務，為您的家庭與辦公室提供卓越潔淨與安心。"
+  },
+  "Home": {
+    "hero": {
+      "titleLine1": "你的家，",
+      "titleEmphasis": "一塵不染",
+      "titleLine2": " 的潔淨",
+      "subtitle": "體驗專注於品質、可靠與環保的卓越清潔服務。",
+      "book": "預約清潔",
+      "viewServices": "瀏覽服務"
+    },
+    "cta": {
+      "headingLine1": "準備好迎接更潔淨，",
+      "headingEmphasis": "更愉悅的家嗎？",
+      "body": "立即預約，體驗為何家庭信賴 Qlinest 的極致潔淨。",
+      "bookFirst": "立即預約首次清潔"
+    }
+  },
+  "Calculator": {
+    "title": "退租清潔費用試算",
+    "description": "根據房型與需要的額外服務，自動計算預估費用。特殊需求會在提交後由專人聯繫提供正式報價。",
+    "step1": {
+      "title": "步驟 1：選擇房型",
+      "placeholder": "請選擇房型"
+    },
+    "step2": {
+      "title": "步驟 2：額外項目（可複選）",
+      "carpet": {
+        "title": "蒸汽深度清潔",
+        "description": "$70 / 處"
+      },
+      "windows": {
+        "title": "門窗深度清潔",
+        "description": "$15 / 扇"
+      },
+      "oven": {
+        "title": "烤箱深度清潔",
+        "description": "$50 / 個"
+      },
+      "microwave": {
+        "title": "微波爐深度清潔",
+        "description": "$25 / 個"
+      },
+      "dishwasher": {
+        "title": "洗碗機深度清潔",
+        "description": "$25 / 個"
+      },
+      "fridge": {
+        "title": "冰箱深度清潔",
+        "description": "$50 / 個"
+      },
+      "balcony": {
+        "title": "陽台額外清潔",
+        "description": "$50 / 個"
+      },
+      "extraRoom": {
+        "title": "額外衛浴 / 客廳",
+        "description": "$30 / 間"
+      }
+    },
+    "step3": {
+      "title": "步驟 3：特殊項目（需人工報價）",
+      "wallStain": {
+        "title": "牆面特殊污漬",
+        "description": "需人工報價（參考 $30 / 處）"
+      },
+      "floorStain": {
+        "title": "地面特殊污漬",
+        "description": "需人工報價（參考 $30 / 處）"
+      },
+      "trash": {
+        "title": "生活垃圾清潔",
+        "description": "需人工報價（參考 $10 / 袋）"
+      }
+    },
+    "summary": {
+      "label": "預估總價",
+      "selected": "目前選擇：{property}",
+      "note1": "此金額僅供參考，實際費用以現場勘查為準。",
+      "note2": "若有其他需求，請於備註中說明，我們將提供客製報價。",
+      "bookNow": "預約清潔"
+    }
+  },
+  "About": {
+    "hero": {
+      "title": "關於 Sodax Clean",
+      "subtitle": "我們致力於提供卓越的清潔服務，為客戶創造更健康、更舒適的環境。"
+    },
+    "story": {
+      "title": "我們的故事",
+      "content1": "我們的使命很簡單：為悉尼居民和企業提供值得信賴的高品質清潔服務。我們深知潔淨的空間不只是外觀，更是為您、您的家人或員工創造健康環境。",
+      "content2": "從一開始的小型專業清潔團隊，我們已成長為服務悉尼數百名滿意客戶的公司。對品質和客戶滿意度的承諾始終是我們一切工作的核心。",
+      "content3": "我們團隊的每位成員都秉持核心價值觀：誠信、注重細節，以及對創造完美空間的真誠熱情。"
+    },
+    "stats": {
+      "clients": "滿意客戶",
+      "experience": "年經驗",
+      "support": "支援",
+      "satisfaction": "滿意度"
+    },
+    "values": {
+      "title": "我們的價值觀",
+      "subtitle": "指導我們一切工作的原則，從清潔方法到對待客戶的方式。",
+      "quality": {
+        "title": "品質第一",
+        "description": "我們從不妥協品質。每項清潔任務都以最高標準執行，注重每個細節。"
+      },
+      "care": {
+        "title": "客戶關懷",
+        "description": "您的滿意是我們的優先考量。我們聆聽您的需求，量身定制服務以超越您的期望。"
+      },
+      "eco": {
+        "title": "環保友善",
+        "description": "我們使用對環境負責的清潔產品，對您的家人、寵物和地球都安全。"
+      }
+    },
+    "cta": {
+      "title": "準備體驗 Sodax Clean 的不同之處？",
+      "subtitle": "加入數百名信任我們清潔需求的滿意客戶。",
+      "getQuote": "獲取免費報價",
+      "contact": "聯繫我們"
+    }
+  },
+  "Services": {
+    "hero": {
+      "title": "我們的清潔服務",
+      "subtitle": "專業的清潔解決方案，根據您的特定需求量身定制。從定期維護到專業深度清潔服務。"
+    },
+    "services": {
+      "home": {
+        "title": "家庭清潔",
+        "description": "定期住宅清潔服務，讓您的家保持完美和舒適。",
+        "features": [
+          "客廳和臥室",
+          "廚房清潔和消毒",
+          "浴室深度清潔",
+          "除塵和吸塵",
+          "垃圾清理"
+        ],
+        "price": "從 $120/次 起",
+        "quote": "獲取家庭清潔報價"
+      },
+      "deep": {
+        "title": "深度清潔",
+        "description": "全面的深度清潔服務，涵蓋您家中的每個角落。",
+        "features": [
+          "詳細踢腳板清潔",
+          "室內窗戶清潔",
+          "家具後方和下方",
+          "燈具清潔",
+          "櫃子和抽屜清潔"
+        ],
+        "price": "從 $250/次 起",
+        "quote": "獲取深度清潔報價"
+      },
+      "office": {
+        "title": "辦公室清潔",
+        "description": "專業商業清潔服務，為高效的工作環境提供支持。",
+        "features": [
+          "工作空間消毒",
+          "公共區域清潔",
+          "洗手間維護",
+          "地板保養和拋光",
+          "廢物管理"
+        ],
+        "price": "從 $200/次 起",
+        "quote": "獲取辦公室清潔報價"
+      },
+      "construction": {
+        "title": "裝修後清潔",
+        "description": "裝修或建設項目後的徹底清潔。",
+        "features": [
+          "粉塵和碎片清理",
+          "表面清潔和拋光",
+          "窗戶和窗框清潔",
+          "地板清潔和打蠟",
+          "最終檢查準備"
+        ],
+        "price": "從 $400/次 起",
+        "quote": "獲取裝修後清潔報價"
+      }
+    },
+    "process": {
+      "title": "服務流程",
+      "subtitle": "讓您的空間獲得專業清潔服務簡單又省心。",
+      "steps": {
+        "1": {
+          "title": "請求報價",
+          "description": "告訴我們您的空間和清潔需求"
+        },
+        "2": {
+          "title": "獲得估價",
+          "description": "24小時內收到詳細報價"
+        },
+        "3": {
+          "title": "安排服務",
+          "description": "選擇方便的清潔時間"
+        },
+        "4": {
+          "title": "享受潔淨空間",
+          "description": "放鬆享受專業清潔的環境"
+        }
+      }
+    },
+    "cta": {
+      "title": "需要客製化清潔方案？",
+      "subtitle": "我們提供靈活的清潔計劃，根據您的獨特需求量身定制。",
+      "contact": "聯繫我們獲取客製報價"
+    }
+  },
+  "Contact": {
+    "hero": {
+      "title": "聯繫我們",
+      "subtitle": "準備改變您的空間？今天就聯繫我們獲取免費、無義務的報價，體驗 Sodax Clean 的不同。"
+    },
+    "form": {
+      "title": "請求免費報價",
+      "success": "感謝您的詢問！我們將在24小時內與您聯繫。",
+      "error": "出現問題。請重試或直接致電我們。",
+      "name": {
+        "label": "全名 *",
+        "placeholder": "張三"
+      },
+      "email": {
+        "label": "電子郵件地址 *",
+        "placeholder": "zhang@example.com"
+      },
+      "phone": {
+        "label": "電話號碼",
+        "placeholder": "+61 2 1234 5678"
+      },
+      "service": {
+        "label": "服務類型 *",
+        "placeholder": "請選擇服務",
+        "options": {
+          "home": "家庭清潔",
+          "deep": "深度清潔",
+          "office": "辦公室清潔",
+          "construction": "裝修後清潔",
+          "custom": "客製化方案"
+        }
+      },
+      "message": {
+        "label": "告訴我們您的清潔需求 *",
+        "placeholder": "描述您需要清潔的空間、任何特殊要求和偏好的時間..."
+      },
+      "submit": "獲取免費報價"
+    },
+    "info": {
+      "title": "聯繫資訊",
+      "phone": {
+        "title": "電話",
+        "number": "+61 2 1234 5678",
+        "hours": "週一至週五：上午8點-下午6點，週六：上午9點-下午4點"
+      },
+      "email": {
+        "title": "電子郵件",
+        "address": "info@sodaxclean.com.au",
+        "response": "我們在24小時內回覆"
+      },
+      "area": {
+        "title": "服務區域",
+        "location": "悉尼大都會區",
+        "coverage": "CBD 30公里內所有郊區"
+      },
+      "guarantee": {
+        "title": "快速回應保證",
+        "items": [
+          "24小時內電子郵件回覆",
+          "營業時間內電話支援",
+          "24小時內免費報價"
+        ]
+      }
+    }
+  }
+}

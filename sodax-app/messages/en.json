@@ -1,0 +1,295 @@
+{
+  "Nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "Actions": {
+    "getQuote": "Get Quote",
+    "switchToZh": "中文",
+    "switchToEn": "EN"
+  },
+  "Footer": {
+    "services": "Services",
+    "company": "Company",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "© {year} Sodax Clean. All rights reserved.",
+    "companyDescription": "Professional cleaning services you can trust. Delivering exceptional cleanliness and peace of mind for your home or office."
+  },
+  "Home": {
+    "hero": {
+      "titleLine1": "Your Home,",
+      "titleEmphasis": "Spotlessly",
+      "titleLine2": " Clean",
+      "subtitle": "Experience unparalleled cleaning services with a focus on quality, reliability, and eco-friendly practices.",
+      "book": "Book a Cleaning",
+      "viewServices": "View Services"
+    },
+    "cta": {
+      "headingLine1": "Ready for a Cleaner,",
+      "headingEmphasis": "Happier Home?",
+      "body": "Book today and discover why families trust Qlinest for spotless living.",
+      "bookFirst": "Book Your First Cleaning"
+    }
+  },
+  "Calculator": {
+    "title": "End of Lease Cleaning Cost Calculator",
+    "description": "Automatically calculate estimated costs based on property type and additional services. Special requirements will be quoted by our team after submission.",
+    "step1": {
+      "title": "Step 1: Select Property Type",
+      "placeholder": "Please select property type"
+    },
+    "step2": {
+      "title": "Step 2: Additional Services (Multiple Selection)",
+      "carpet": {
+        "title": "Steam Deep Cleaning",
+        "description": "$70 / location"
+      },
+      "windows": {
+        "title": "Window Deep Cleaning",
+        "description": "$15 / window"
+      },
+      "oven": {
+        "title": "Oven Deep Cleaning",
+        "description": "$50 / unit"
+      },
+      "microwave": {
+        "title": "Microwave Deep Cleaning",
+        "description": "$25 / unit"
+      },
+      "dishwasher": {
+        "title": "Dishwasher Deep Cleaning",
+        "description": "$25 / unit"
+      },
+      "fridge": {
+        "title": "Fridge Deep Cleaning",
+        "description": "$50 / unit"
+      },
+      "balcony": {
+        "title": "Balcony Additional Cleaning",
+        "description": "$50 / unit"
+      },
+      "extraRoom": {
+        "title": "Extra Bathroom / Living Room",
+        "description": "$30 / room"
+      }
+    },
+    "step3": {
+      "title": "Step 3: Special Items (Manual Quoting Required)",
+      "wallStain": {
+        "title": "Wall Special Stains",
+        "description": "Manual quote required (reference $30 / location)"
+      },
+      "floorStain": {
+        "title": "Floor Special Stains",
+        "description": "Manual quote required (reference $30 / location)"
+      },
+      "trash": {
+        "title": "Garbage Cleaning",
+        "description": "Manual quote required (reference $10 / bag)"
+      }
+    },
+    "summary": {
+      "label": "Estimated Total",
+      "selected": "Currently selected: {property}",
+      "note1": "This amount is for reference only. Actual costs will be determined by on-site inspection.",
+      "note2": "If you have other requirements, please specify in the notes for a custom quote.",
+      "bookNow": "Book Cleaning"
+    }
+  },
+  "About": {
+    "hero": {
+      "title": "About Sodax Clean",
+      "subtitle": "We are dedicated to providing exceptional cleaning services that create healthier, more comfortable environments for our clients."
+    },
+    "story": {
+      "title": "Our Story",
+      "content1": "Founded with a simple mission: to provide Sydney residents and businesses with reliable, high-quality cleaning services they can trust. We understand that a clean space is more than just aesthetics – it is about creating a healthy environment for you, your family, or your employees.",
+      "content2": "From our humble beginnings as a small team of passionate cleaners, we have grown to serve hundreds of satisfied customers across Sydney. Our commitment to quality and customer satisfaction remains at the heart of everything we do.",
+      "content3": "Every member of our team shares our core values: integrity, attention to detail, and a genuine passion for creating pristine spaces."
+    },
+    "stats": {
+      "clients": "Happy Clients",
+      "experience": "Years Experience",
+      "support": "Support",
+      "satisfaction": "Satisfaction"
+    },
+    "values": {
+      "title": "Our Values",
+      "subtitle": "The principles that guide everything we do, from our cleaning methods to how we treat our clients.",
+      "quality": {
+        "title": "Quality First",
+        "description": "We never compromise on quality. Every cleaning task is performed to the highest standards with attention to every detail."
+      },
+      "care": {
+        "title": "Customer Care",
+        "description": "Your satisfaction is our priority. We listen to your needs and tailor our services to exceed your expectations."
+      },
+      "eco": {
+        "title": "Eco-Friendly",
+        "description": "We use environmentally responsible cleaning products that are safe for your family, pets, and the planet."
+      }
+    },
+    "cta": {
+      "title": "Ready to Experience the Sodax Clean Difference?",
+      "subtitle": "Join hundreds of satisfied customers who trust us with their cleaning needs.",
+      "getQuote": "Get Free Quote",
+      "contact": "Contact Us"
+    }
+  },
+  "Services": {
+    "hero": {
+      "title": "Our Cleaning Services",
+      "subtitle": "Professional cleaning solutions tailored to your specific needs. From regular maintenance to specialized deep cleaning services."
+    },
+    "services": {
+      "home": {
+        "title": "Home Cleaning",
+        "description": "Regular residential cleaning services to keep your home pristine and comfortable.",
+        "features": [
+          "Living areas and bedrooms",
+          "Kitchen cleaning and sanitization",
+          "Bathroom deep cleaning",
+          "Dusting and vacuuming",
+          "Trash removal"
+        ],
+        "price": "From $120/session",
+        "quote": "Get Quote for Home Cleaning"
+      },
+      "deep": {
+        "title": "Deep Cleaning",
+        "description": "Comprehensive deep cleaning service for every corner of your home.",
+        "features": [
+          "Detailed baseboard cleaning",
+          "Inside window cleaning",
+          "Behind and under furniture",
+          "Light fixture cleaning",
+          "Cabinet and drawer cleaning"
+        ],
+        "price": "From $250/session",
+        "quote": "Get Quote for Deep Cleaning"
+      },
+      "office": {
+        "title": "Office Cleaning",
+        "description": "Professional commercial cleaning services for productive work environments.",
+        "features": [
+          "Workspace sanitization",
+          "Common area cleaning",
+          "Restroom maintenance",
+          "Floor care and polishing",
+          "Waste management"
+        ],
+        "price": "From $200/session",
+        "quote": "Get Quote for Office Cleaning"
+      },
+      "construction": {
+        "title": "Post-Construction",
+        "description": "Thorough cleaning after renovations or construction projects.",
+        "features": [
+          "Dust and debris removal",
+          "Surface cleaning and polishing",
+          "Window and frame cleaning",
+          "Floor cleaning and waxing",
+          "Final inspection ready"
+        ],
+        "price": "From $400/session",
+        "quote": "Get Quote for Post-Construction"
+      }
+    },
+    "process": {
+      "title": "How It Works",
+      "subtitle": "Getting your space professionally cleaned is simple and hassle-free.",
+      "steps": {
+        "1": {
+          "title": "Request Quote",
+          "description": "Tell us about your space and cleaning needs"
+        },
+        "2": {
+          "title": "Get Estimate",
+          "description": "Receive a detailed quote within 24 hours"
+        },
+        "3": {
+          "title": "Schedule Service",
+          "description": "Choose a convenient time for your cleaning"
+        },
+        "4": {
+          "title": "Enjoy Clean Space",
+          "description": "Relax in your professionally cleaned environment"
+        }
+      }
+    },
+    "cta": {
+      "title": "Need a Custom Cleaning Solution?",
+      "subtitle": "We offer flexible cleaning plans tailored to your unique requirements.",
+      "contact": "Contact Us for Custom Quote"
+    }
+  },
+  "Contact": {
+    "hero": {
+      "title": "Get in Touch",
+      "subtitle": "Ready to transform your space? Contact us today for a free, no-obligation quote and discover the Sodax Clean difference."
+    },
+    "form": {
+      "title": "Request a Free Quote",
+      "success": "Thank you for your inquiry! We will get back to you within 24 hours.",
+      "error": "Something went wrong. Please try again or call us directly.",
+      "name": {
+        "label": "Full Name *",
+        "placeholder": "John Doe"
+      },
+      "email": {
+        "label": "Email Address *",
+        "placeholder": "john@example.com"
+      },
+      "phone": {
+        "label": "Phone Number",
+        "placeholder": "+61 2 1234 5678"
+      },
+      "service": {
+        "label": "Service Type *",
+        "placeholder": "Select a service",
+        "options": {
+          "home": "Home Cleaning",
+          "deep": "Deep Cleaning",
+          "office": "Office Cleaning",
+          "construction": "Post-Construction",
+          "custom": "Custom Solution"
+        }
+      },
+      "message": {
+        "label": "Tell us about your cleaning needs *",
+        "placeholder": "Describe the space you need cleaned, any specific requirements, and preferred timing..."
+      },
+      "submit": "Get Free Quote"
+    },
+    "info": {
+      "title": "Get in Touch",
+      "phone": {
+        "title": "Phone",
+        "number": "+61 2 1234 5678",
+        "hours": "Mon-Fri: 8AM-6PM, Sat: 9AM-4PM"
+      },
+      "email": {
+        "title": "Email",
+        "address": "info@sodaxclean.com.au",
+        "response": "We respond within 24 hours"
+      },
+      "area": {
+        "title": "Service Area",
+        "location": "Sydney Metropolitan Area",
+        "coverage": "All suburbs within 30km of CBD"
+      },
+      "guarantee": {
+        "title": "Quick Response Guarantee",
+        "items": [
+          "Email responses within 24 hours",
+          "Phone support during business hours",
+          "Free quotes within 24 hours"
+        ]
+      }
+    }
+  }
+}

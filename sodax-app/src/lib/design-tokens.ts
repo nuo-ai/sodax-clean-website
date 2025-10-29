@@ -34,6 +34,17 @@ export const colors = {
     900: '#171717',
   },
 
+  // 品牌色（Figma 對齊）
+  primaryDarkBlue: '#1F77D6',
+  primaryBlueLight: '#B2EAFE',
+  primaryBlueLightest: '#EAF3FC',
+  accentYellow: '#FFD643',
+
+  // 基礎色（Figma 對齊）
+  baseBlack: '#0E1109',
+  baseGray: '#677489',
+  whiteStroke: '#E3E8EF',
+
   // 白色系
   white: '#ffffff',
   
@@ -58,7 +69,7 @@ export const colors = {
 // 字體系統 (Typography System)
 export const typography = {
   fontFamily: {
-    sans: ['Inter', 'system-ui', 'sans-serif'],
+    sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
     serif: ['Georgia', 'serif'],
   },
   

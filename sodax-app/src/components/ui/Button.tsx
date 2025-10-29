@@ -2,7 +2,6 @@
 
 import { forwardRef } from 'react';
 import { cn } from '@/lib/utils';
-import { colors } from '@/lib/design-tokens';
 
 /**
  * 按鈕組件 (Button Component)
@@ -36,19 +35,19 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variants = {
       primary: [
-        'bg-teal-600 text-white hover:bg-teal-700 focus:ring-teal-500 shadow-sm hover:shadow-md',
-        'active:bg-teal-800 active:shadow-sm transform active:scale-[0.98]',
+        'bg-primary-dark-blue text-white hover:bg-primary-dark-blue/90 focus:ring-primary-dark-blue shadow-sm hover:shadow-md',
+        'active:bg-primary-dark-blue/95 active:shadow-sm transform active:scale-[0.98]',
       ],
       secondary: [
-        'bg-neutral-100 text-neutral-900 hover:bg-neutral-200 focus:ring-neutral-500 border border-neutral-300',
-        'active:bg-neutral-300 transform active:scale-[0.98]',
+        'bg-white text-base-black hover:bg-neutral-50 focus:ring-base-gray border border-white-stroke',
+        'active:bg-neutral-100 transform active:scale-[0.98]',
       ],
       outline: [
-        'border-2 border-teal-600 text-teal-600 hover:bg-teal-50 focus:ring-teal-500 bg-transparent',
-        'active:bg-teal-100 transform active:scale-[0.98]',
+        'border-2 border-primary-dark-blue text-primary-dark-blue hover:bg-primary-blue-lightest focus:ring-primary-dark-blue bg-transparent',
+        'active:bg-primary-blue-light transform active:scale-[0.98]',
       ],
       ghost: [
-        'text-neutral-700 hover:bg-neutral-100 hover:text-neutral-900 focus:ring-neutral-500',
+        'text-base-gray hover:bg-neutral-100 hover:text-base-black focus:ring-base-gray',
         'active:bg-neutral-200 transform active:scale-[0.98]',
       ],
     };
@@ -59,7 +58,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       lg: 'px-6 py-3 text-lg gap-2.5',
     };
 
-    const focusRing = variant === 'primary' ? 'focus:ring-teal-500' : 'focus:ring-neutral-500';
+    const focusRing = variant === 'primary' ? 'focus:ring-primary-dark-blue' : 'focus:ring-base-gray';
 
     return (
       <button

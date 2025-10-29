@@ -57,7 +57,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
 
     const variants = {
       default: [
-        'border-neutral-300 bg-white focus:border-teal-500 focus:ring-teal-500',
+        'border-neutral-300 bg-white focus:border-primary-dark-blue focus:ring-primary-dark-blue',
         'hover:border-neutral-400',
       ],
       error: [

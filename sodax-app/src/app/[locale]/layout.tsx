@@ -1,31 +1,25 @@
-import '../styles/globals.css'
+import '../../styles/globals.css'
 import type { Metadata } from 'next'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import {NextIntlClientProvider} from 'next-intl'
 import {getLocale, getMessages} from 'next-intl/server'
-import { Plus_Jakarta_Sans } from 'next/font/google'
-
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ['latin'],
-  weight: ['400','500','600','700'],
-  display: 'swap',
-})
 
 export const metadata: Metadata = {
   title: 'Sodax Clean - Professional Cleaning Services',
   description: 'Professional home and office cleaning services in Sydney. Get a free quote today.',
 }
 
-export default async function RootLayout({
+export default async function LocaleLayout({
   children,
+  params: {locale}
 }: {
   children: React.ReactNode
+  params: {locale: string}
 }) {
-  const locale = await getLocale()
   const messages = await getMessages()
   return (
-    <html lang={locale} className={plusJakartaSans.className}>
+    <html lang={locale}>
       <body className="min-h-screen flex flex-col">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header />
