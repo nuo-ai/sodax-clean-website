@@ -94,9 +94,9 @@ export default async function Home() {
           <Image
             src="https://images.unsplash.com/photo-1571757392687-4c13ab6b5b13?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="background"
-            layout="fill"
-            objectFit="cover"
-            className="absolute inset-0 opacity-10"
+            fill
+            sizes="100vw"
+            className="absolute inset-0 object-cover opacity-10"
           />
           <div className="relative z-10">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">

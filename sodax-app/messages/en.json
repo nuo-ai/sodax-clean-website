@@ -33,6 +33,181 @@
       "headingEmphasis": "Happier Home?",
       "body": "Book today and discover why families trust Qlinest for spotless living.",
       "bookFirst": "Book Your First Cleaning"
+    },
+    "servicesSection": {
+      "badge": "SERVICES",
+      "title": "Our Cleaning Services",
+      "subtitle": "Discover a range of services designed to bring comfort and cleanliness into every corner of your home.",
+      "ctaLabel": "Browse All Services",
+      "cards": [
+        {
+          "id": "standard",
+          "title": "Standard Cleaning",
+          "description": "Perfect for regular maintenance to keep your home fresh and tidy.",
+          "imageUrl": "https://images.unsplash.com/photo-1585421793393-363695d75249?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "id": "deep",
+          "title": "Deep Cleaning",
+          "description": "A comprehensive service that tackles dirt and grime in every corner.",
+          "imageUrl": "https://images.unsplash.com/photo-1600724836930-6c689f923293?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "id": "bond",
+          "title": "Bond Cleaning",
+          "description": "Ensure you get your bond back with our meticulous end-of-lease cleaning.",
+          "imageUrl": "https://images.unsplash.com/photo-1541123437800-913357539426?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
+      ]
+    },
+    "promotion": {
+      "badge": "PROMOTION",
+      "title": "Get a Sparkling Clean Home At a Special Price!",
+      "subtitle": "Enjoy our limited-time offer on professional home cleaning services.",
+      "buttonLabel": "Book Now",
+      "cards": [
+        {
+          "id": "first-time",
+          "title": "First-Time Customer",
+          "discount": "Get 20% Off",
+          "description": "First-time customers get 20% off any cleaning service. Book now and experience the Qlinest difference!",
+          "imageUrl": "https://images.unsplash.com/photo-1571757392687-4c13ab6b5b13?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "id": "referral",
+          "title": "Referral Program",
+          "discount": "Get $50 Off",
+          "description": "Refer a friend and you both get $50 off your next cleaning service. Sharing is caring!",
+          "imageUrl": "https://images.unsplash.com/photo-1628102490334-a9aaa5b401f0?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
+      ]
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Got Questions?",
+      "subtitle": "We’ve got answers to your most common cleaning concerns.",
+      "items": [
+        {
+          "id": "standard-service",
+          "question": "What is included in a standard cleaning service?",
+          "answer": "A standard cleaning service includes dusting, vacuuming, mopping, and cleaning of all surfaces in the kitchen, bathrooms, bedrooms, and living areas. We also empty trash bins and make beds."
+        },
+        {
+          "id": "safe-products",
+          "question": "Are your cleaning products safe for pets and children?",
+          "answer": "Yes, we use eco-friendly and non-toxic cleaning products that are safe for your entire family, including pets and children. We prioritize your health and safety."
+        },
+        {
+          "id": "need-to-be-home",
+          "question": "Do I need to be home during the cleaning?",
+          "answer": "No, you do not need to be home. Many of our clients provide us with a key or a code to enter their home. Our team is fully vetted and insured for your peace of mind."
+        },
+        {
+          "id": "duration",
+          "question": "How long will the cleaning take?",
+          "answer": "The duration of the cleaning depends on the size of your home and the type of service you have requested. We can provide an estimated time frame when you book your service."
+        },
+        {
+          "id": "satisfaction",
+          "question": "What if I am not satisfied with the service?",
+          "answer": "Your satisfaction is our guarantee. If you are not satisfied with our service, please contact us within 24 hours, and we will return to re-clean the specific areas at no extra cost."
+        }
+      ]
+    },
+    "blog": {
+      "badge": "BLOG",
+      "title": "From Our Cleaning Experts",
+      "subtitle": "Tips, tricks, and insights to maintain a fresher home.",
+      "main": {
+        "id": "spotless-kitchen",
+        "category": "TIPS & TRICKS",
+        "title": "The Ultimate Guide to a Spotless Kitchen",
+        "description": "Learn the secrets to maintaining a sparkling clean kitchen with our expert tips and tricks.",
+        "imageUrl": "https://images.unsplash.com/photo-1600585152220-029e84b1ae4d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      "posts": [
+        {
+          "id": "eco-products",
+          "title": "5 Must-Have Eco-Friendly Cleaning Products",
+          "category": "PRODUCTS",
+          "imageUrl": "https://images.unsplash.com/photo-1593138985396-9d3a2a6c8e3a?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "id": "prepare-service",
+          "title": "How to Prepare for a Professional Cleaning Service",
+          "category": "GUIDES",
+          "imageUrl": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "id": "regular-schedule",
+          "title": "The Benefits of a Regular Cleaning Schedule",
+          "category": "LIFESTYLE",
+          "imageUrl": "https://images.unsplash.com/photo-1516542076529-1ea08553386f?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
+      ]
+    },
+    "howItWorks": {
+      "badge": "HOW IT WORKS",
+      "title": "How We Can Help",
+      "subtitle": "Simple, seamless, and stress-free cleaning in 4 easy steps.",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1528740561666-dc2479708150?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "alt": "How it works"
+      },
+      "steps": [
+        {
+          "id": "book",
+          "number": "01",
+          "title": "Book Online",
+          "description": "Schedule your cleaning in just a few clicks through our easy-to-use online system."
+        },
+        {
+          "id": "clean",
+          "number": "02",
+          "title": "We Clean",
+          "description": "Our professional team arrives on time with all the necessary eco-friendly supplies."
+        },
+        {
+          "id": "relax",
+          "number": "03",
+          "title": "You Relax",
+          "description": "Enjoy your sparkling clean home while we take care of the hard work."
+        },
+        {
+          "id": "enjoy",
+          "number": "04",
+          "title": "Enjoy Results",
+          "description": "Experience the joy and comfort of a professionally cleaned space."
+        }
+      ]
+    },
+    "testimonials": {
+      "badge": "TESTIMONIALS",
+      "title": "What Our Clients Are Saying",
+      "subtitle": "Real words from real happy homes.",
+      "items": [
+        {
+          "id": "sarah",
+          "quote": "Qlinest transformed my home! Their attention to detail was impeccable. I've never seen my place so clean. Highly recommend their service!",
+          "name": "Sarah L.",
+          "location": "Sydney, NSW",
+          "avatarUrl": "https://randomuser.me/api/portraits/women/44.jpg"
+        },
+        {
+          "id": "michael",
+          "quote": "The deep cleaning service was worth every penny. The team was professional, punctual, and incredibly thorough. My apartment feels brand new.",
+          "name": "Michael B.",
+          "location": "Melbourne, VIC",
+          "avatarUrl": "https://randomuser.me/api/portraits/men/32.jpg"
+        },
+        {
+          "id": "jessica",
+          "quote": "I was stressed about my end-of-lease clean, but Qlinest handled everything perfectly. I got my full bond back without any issues. Thank you!",
+          "name": "Jessica P.",
+          "location": "Brisbane, QLD",
+          "avatarUrl": "https://randomuser.me/api/portraits/women/68.jpg"
+        }
+      ]
     }
   },
   "Calculator": {
@@ -197,7 +372,8 @@
         ],
         "price": "From $400/session",
         "quote": "Get Quote for Post-Construction"
-      }
+      },
+      "featuresHeading": "What's Included"
     },
     "process": {
       "title": "How It Works",
