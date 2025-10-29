@@ -33,6 +33,181 @@
       "headingEmphasis": "更愉悅的家嗎？",
       "body": "立即預約，體驗為何家庭信賴 Qlinest 的極致潔淨。",
       "bookFirst": "立即預約首次清潔"
+    },
+    "servicesSection": {
+      "badge": "服務",
+      "title": "我們的清潔服務",
+      "subtitle": "發現多樣化的清潔服務，為您家的每個角落帶來舒適與潔淨。",
+      "ctaLabel": "瀏覽所有服務",
+      "cards": [
+        {
+          "id": "standard",
+          "title": "日常清潔",
+          "description": "適合定期維護，讓您的家保持清新整潔。",
+          "imageUrl": "https://images.unsplash.com/photo-1585421793393-363695d75249?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "id": "deep",
+          "title": "深度清潔",
+          "description": "全面處理每個角落的頑垢與髒污。",
+          "imageUrl": "https://images.unsplash.com/photo-1600724836930-6c689f923293?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "id": "bond",
+          "title": "退租清潔",
+          "description": "以細緻的交屋清潔協助您順利取回押金。",
+          "imageUrl": "https://images.unsplash.com/photo-1541123437800-913357539426?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
+      ]
+    },
+    "promotion": {
+      "badge": "限時優惠",
+      "title": "限時優惠，打造閃亮居家！",
+      "subtitle": "把握限時優惠，體驗專業居家清潔服務。",
+      "buttonLabel": "立即預約",
+      "cards": [
+        {
+          "id": "first-time",
+          "title": "新客戶優惠",
+          "discount": "享 8 折優惠",
+          "description": "首次預約任一清潔服務即享 8 折，立即體驗 Qlinest 的專業與細緻！",
+          "imageUrl": "https://images.unsplash.com/photo-1571757392687-4c13ab6b5b13?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "id": "referral",
+          "title": "好友推薦",
+          "discount": "各享 $50 折扣",
+          "description": "推薦好友一起預約，您與好友皆可享下次清潔 $50 折扣。分享愈多，優惠愈多！",
+          "imageUrl": "https://images.unsplash.com/photo-1628102490334-a9aaa5b401f0?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
+      ]
+    },
+    "faq": {
+      "badge": "常見問題",
+      "title": "有疑問嗎？",
+      "subtitle": "最常見的清潔疑問，我們一次解答。",
+      "items": [
+        {
+          "id": "standard-service",
+          "question": "標準清潔服務包含哪些內容？",
+          "answer": "標準清潔包含除塵、吸塵、拖地，以及廚房、浴室、臥室與客廳的表面清潔。我們也會清空垃圾桶並整理床鋪。"
+        },
+        {
+          "id": "safe-products",
+          "question": "你們的清潔用品對小孩與寵物安全嗎？",
+          "answer": "是的，我們採用環保、無毒的清潔用品，對全家人與寵物皆安全，讓您安心無虞。"
+        },
+        {
+          "id": "need-to-be-home",
+          "question": "清潔時需要在家嗎？",
+          "answer": "不必。多數客戶會提供鑰匙或進門密碼，我們的團隊皆經過完整背景審核與保險，讓您放心。"
+        },
+        {
+          "id": "duration",
+          "question": "清潔需要多久時間？",
+          "answer": "時間長短取決於房屋大小與服務內容。我們會在預約時提供估計的清潔時間。"
+        },
+        {
+          "id": "satisfaction",
+          "question": "若對服務不滿意怎麼辦？",
+          "answer": "我們提供滿意保證。若有不滿意之處，請在 24 小時內告知，我們會免費回訪處理。"
+        }
+      ]
+    },
+    "blog": {
+      "badge": "清潔誌",
+      "title": "清潔達人小教室",
+      "subtitle": "實用技巧與靈感，讓居家更清新。",
+      "main": {
+        "id": "spotless-kitchen",
+        "category": "技巧分享",
+        "title": "廚房無死角清潔指南",
+        "description": "掌握專家祕訣，輕鬆維持閃亮潔淨的廚房。",
+        "imageUrl": "https://images.unsplash.com/photo-1600585152220-029e84b1ae4d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      "posts": [
+        {
+          "id": "eco-products",
+          "title": "5 款必備環保清潔用品",
+          "category": "產品推薦",
+          "imageUrl": "https://images.unsplash.com/photo-1593138985396-9d3a2a6c8e3a?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "id": "prepare-service",
+          "title": "專業清潔前的準備清單",
+          "category": "懶人包",
+          "imageUrl": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "id": "regular-schedule",
+          "title": "定期清潔的好處",
+          "category": "生活風格",
+          "imageUrl": "https://images.unsplash.com/photo-1516542076529-1ea08553386f?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
+      ]
+    },
+    "howItWorks": {
+      "badge": "服務流程",
+      "title": "我們如何為您服務",
+      "subtitle": "四個步驟，輕鬆享受無壓清潔體驗。",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1528740561666-dc2479708150?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "alt": "服務流程示意"
+      },
+      "steps": [
+        {
+          "id": "book",
+          "number": "01",
+          "title": "線上預約",
+          "description": "透過簡單的線上流程，幾個步驟即可完成預約。"
+        },
+        {
+          "id": "clean",
+          "number": "02",
+          "title": "專業到府",
+          "description": "清潔團隊準時到府，並攜帶環保、安全的清潔用品。"
+        },
+        {
+          "id": "relax",
+          "number": "03",
+          "title": "安心放鬆",
+          "description": "在專家清潔的同時，好好享受您的時間。"
+        },
+        {
+          "id": "enjoy",
+          "number": "04",
+          "title": "煥然一新",
+          "description": "完成後盡情享受煥然一新的舒適空間。"
+        }
+      ]
+    },
+    "testimonials": {
+      "badge": "客戶見證",
+      "title": "聽聽他們怎麼說",
+      "subtitle": "真實客戶的好評，來自每一個被照顧的家。",
+      "items": [
+        {
+          "id": "sarah",
+          "quote": "Qlinest 讓我的家煥然一新！細節處理得非常到位，從未看過這麼乾淨的家，超推薦！",
+          "name": "Sarah L.",
+          "location": "雪梨，NSW",
+          "avatarUrl": "https://randomuser.me/api/portraits/women/44.jpg"
+        },
+        {
+          "id": "michael",
+          "quote": "深度清潔非常值得。團隊專業、準時又徹底，讓我的公寓像新的一樣。",
+          "name": "Michael B.",
+          "location": "墨爾本，VIC",
+          "avatarUrl": "https://randomuser.me/api/portraits/men/32.jpg"
+        },
+        {
+          "id": "jessica",
+          "quote": "退租清潔本來讓我很緊張，但 Qlinest 完美處理，押金順利全額退回，真的感謝！",
+          "name": "Jessica P.",
+          "location": "布里斯本，QLD",
+          "avatarUrl": "https://randomuser.me/api/portraits/women/68.jpg"
+        }
+      ]
     }
   },
   "Calculator": {
@@ -197,7 +372,8 @@
         ],
         "price": "從 $400/次 起",
         "quote": "獲取裝修後清潔報價"
-      }
+      },
+      "featuresHeading": "服務內容"
     },
     "process": {
       "title": "服務流程",

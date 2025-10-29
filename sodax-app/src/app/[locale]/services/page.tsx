@@ -1,121 +1,93 @@
 import { Metadata } from 'next';
-import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
 import { Button } from '@/components/ui/Button';
+
+const SERVICE_KEYS = ['home', 'deep', 'office', 'construction'] as const;
+const PROCESS_STEPS = ['1', '2', '3', '4'] as const;
+
+type ServiceKey = (typeof SERVICE_KEYS)[number];
+
+type ServiceContent = {
+  key: ServiceKey;
+  title: string;
+  description: string;
+  features: string[];
+  price: string;
+  quote: string;
+};
+
+type ProcessStepContent = {
+  number: string;
+  title: string;
+  description: string;
+};
 
 export const metadata: Metadata = {
   title: 'Our Services - Sodax Clean',
-  description: 'Professional cleaning services for home and office in Sydney. From regular cleaning to deep cleaning services.',
+  description:
+    'Professional cleaning services for home and office in Sydney. From regular cleaning to deep cleaning services.',
 };
 
-export default function ServicesPage() {
-  const t = useTranslations('Services');
+export default async function ServicesPage() {
+  const t = await getTranslations('Services');
 
-  const services = [
-    {
-      key: 'home',
-      title: t('services.home.title'),
-      description: t('services.home.description'),
-      features: t('services.home.features'),
-      price: t('services.home.price'),
-      quote: t('services.home.quote'),
-    },
-    {
-      key: 'deep',
-      title: t('services.deep.title'),
-      description: t('services.deep.description'),
-      features: t('services.deep.features'),
-      price: t('services.deep.price'),
-      quote: t('services.deep.quote'),
-    },
-    {
-      key: 'office',
-      title: t('services.office.title'),
-      description: t('services.office.description'),
-      features: t('services.office.features'),
-      price: t('services.office.price'),
-      quote: t('services.office.quote'),
-    },
-    {
-      key: 'construction',
-      title: t('services.construction.title'),
-      description: t('services.construction.description'),
-      features: t('services.construction.features'),
-      price: t('services.construction.price'),
-      quote: t('services.construction.quote'),
-    },
-  ];
+  const services: ServiceContent[] = SERVICE_KEYS.map((key) => {
+    const features = t.raw(`services.${key}.features`) as string[];
 
-  const processSteps = [
-    {
-      number: '1',
-      title: t('process.steps.1.title'),
-      description: t('process.steps.1.description')
-    },
-    {
-      number: '2',
-      title: t('process.steps.2.title'),
-      description: t('process.steps.2.description')
-    },
-    {
-      number: '3',
-      title: t('process.steps.3.title'),
-      description: t('process.steps.3.description')
-    },
-    {
-      number: '4',
-      title: t('process.steps.4.title'),
-      description: t('process.steps.4.description')
-    }
-  ];
+    return {
+      key,
+      title: t(`services.${key}.title`),
+      description: t(`services.${key}.description`),
+      features,
+      price: t(`services.${key}.price`),
+      quote: t(`services.${key}.quote`),
+    };
+  });
+
+  const processSteps: ProcessStepContent[] = PROCESS_STEPS.map((step) => ({
+    number: step,
+    title: t(`process.steps.${step}.title`),
+    description: t(`process.steps.${step}.description`),
+  }));
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-primary-dark-blue text-white py-20">
+      <section className="bg-primary-dark-blue py-20 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              {t('hero.title')}
-            </h1>
-            <p className="text-xl text-primary-blue-light max-w-3xl mx-auto">
-              {t('hero.subtitle')}
-            </p>
+            <h1 className="mb-6 text-4xl font-bold md:text-5xl">{t('hero.title')}</h1>
+            <p className="mx-auto max-w-3xl text-xl text-primary-blue-light">{t('hero.subtitle')}</p>
           </div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-white">
+      <section className="bg-white py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {services.map((service) => (
-              <div 
+              <div
                 key={service.key}
-                className="bg-white border border-neutral-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden"
+                className="overflow-hidden rounded-lg border border-white-stroke bg-white shadow-sm transition-shadow duration-300 hover:shadow-md"
               >
                 <div className="p-8">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-2xl font-bold text-neutral-900">
-                      {service.title}
-                    </h3>
-                    <div className="bg-primary-blue-lightest text-primary-dark-blue px-3 py-1 rounded-full text-sm font-medium">
+                  <div className="mb-4 flex items-center justify-between">
+                    <h3 className="text-2xl font-bold text-base-black">{service.title}</h3>
+                    <div className="rounded-full bg-primary-blue-lightest px-3 py-1 text-sm font-medium text-primary-dark-blue">
                       {service.price}
                     </div>
                   </div>
-                  
-                  <p className="text-neutral-600 mb-6">
-                    {service.description}
-                  </p>
-                  
+
+                  <p className="mb-6 text-base-gray">{service.description}</p>
+
                   <div className="mb-6">
-                    <h4 className="font-semibold text-neutral-900 mb-3">
-                      {t('services.home.features[0]')}:
-                    </h4>
+                    <h4 className="mb-3 font-semibold text-base-black">{t('services.featuresHeading')}</h4>
                     <ul className="space-y-2">
-                      {service.features.map((feature: string, index: number) => (
-                        <li key={index} className="flex items-center text-neutral-600">
-                          <svg className="w-5 h-5 text-primary-dark-blue mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      {service.features.map((feature) => (
+                        <li key={feature} className="flex items-center text-base-gray">
+                          <svg className="mr-2 h-5 w-5 flex-shrink-0 text-primary-dark-blue" fill="none" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                           {feature}
@@ -123,7 +95,7 @@ export default function ServicesPage() {
                       ))}
                     </ul>
                   </div>
-                  
+
                   <Link href="/contact">
                     <Button variant="primary" className="w-full">
                       {service.quote}
@@ -137,29 +109,21 @@ export default function ServicesPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-neutral-50">
+      <section className="bg-neutral-50 py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-neutral-900 mb-4">
-              {t('process.title')}
-            </h2>
-            <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-              {t('process.subtitle')}
-            </p>
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-3xl font-bold text-base-black">{t('process.title')}</h2>
+            <p className="mx-auto max-w-2xl text-lg text-base-gray">{t('process.subtitle')}</p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {processSteps.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-primary-dark-blue text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+            {processSteps.map((step) => (
+              <div key={step.number} className="text-center">
+                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary-dark-blue text-2xl font-bold text-white">
                   {step.number}
                 </div>
-                <h3 className="text-lg font-semibold text-neutral-900 mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-neutral-600 text-sm">
-                  {step.description}
-                </p>
+                <h3 className="mb-3 text-lg font-semibold text-base-black">{step.title}</h3>
+                <p className="text-sm text-base-gray">{step.description}</p>
               </div>
             ))}
           </div>
@@ -167,18 +131,12 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-primary-dark-blue text-white py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            {t('cta.title')}
-          </h2>
-          <p className="text-xl text-primary-blue-light mb-8">
-            {t('cta.subtitle')}
-          </p>
+      <section className="bg-primary-dark-blue py-16 text-white">
+        <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+          <h2 className="mb-4 text-3xl font-bold">{t('cta.title')}</h2>
+          <p className="mb-8 text-xl text-primary-blue-light">{t('cta.subtitle')}</p>
           <Link href="/contact">
-            <Button variant="secondary">
-              {t('cta.contact')}
-            </Button>
+            <Button variant="secondary">{t('cta.contact')}</Button>
           </Link>
         </div>
       </section>

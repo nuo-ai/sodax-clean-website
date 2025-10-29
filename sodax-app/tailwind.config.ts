@@ -1,6 +1,12 @@
 import type { Config } from 'tailwindcss'
 import { colors, typography } from './src/lib/design-tokens'
 
+const sansFontFamily = [...typography.fontFamily.sans]
+const serifFontFamily = [...typography.fontFamily.serif]
+const fontSize = Object.fromEntries(
+  Object.entries(typography.fontSize).map(([key, value]) => [key, [value[0], { ...value[1] }]])
+) satisfies Record<string, [string, { lineHeight: string }]>
+
 const config: Config = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -26,10 +32,10 @@ const config: Config = {
         'white-stroke': colors.whiteStroke,
       },
       fontFamily: {
-        sans: typography.fontFamily.sans,
-        serif: typography.fontFamily.serif,
+        sans: sansFontFamily,
+        serif: serifFontFamily,
       },
-      fontSize: typography.fontSize,
+      fontSize,
       fontWeight: typography.fontWeight,
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
