@@ -60,6 +60,58 @@
         }
       ]
     },
+    "aboutUs": {
+      "badge": "ABOUT US",
+      "heading": {
+        "title": "Trusted by Hundreds of Happy Homes",
+        "description": "We believe a clean home creates space for a better life. From standard upkeep to detailed deep cleaning, we handle every corner with care, precision, and eco-friendly solutions."
+      },
+      "video": {
+        "alt": "Cleaning service in action",
+        "ariaLabel": "Play introduction video"
+      },
+      "stats": {
+        "homesCleaned": {
+          "value": "1,200+",
+          "label": "Homes Cleaned"
+        },
+        "customerSatisfaction": {
+          "value": "98%",
+          "label": "Customer Satisfaction"
+        },
+        "averageRating": {
+          "value": "4.9/5",
+          "label": "Average Rating"
+        },
+        "yearsExperience": {
+          "value": "5+",
+          "label": "Years of Experience"
+        }
+      }
+    },
+    "whyChooseUs": {
+      "badge": "WHY CHOOSE US",
+      "title": "Why Qlinest Is the Right Choice for Quality",
+      "subtitle": "Discover a range of services designed to bring comfort.",
+      "features": {
+        "ecoFriendly": {
+          "title": "Eco-Friendly Products",
+          "description": "We use non-toxic, biodegradable cleaning products that are safe for your family, pets, and the planet."
+        },
+        "onTime": {
+          "title": "On-Time Service",
+          "description": "We respect your time. Our team arrives promptly and works efficiently to deliver a spotless home on schedule."
+        },
+        "professionals": {
+          "title": "Trained Professionals",
+          "description": "Our team is fully trained, vetted, and insured, ensuring you receive a professional and trustworthy service."
+        },
+        "guarantee": {
+          "title": "Satisfaction Guarantee",
+          "description": "Your satisfaction is our priority. If you're not happy, we'll come back and make it right."
+        }
+      }
+    },
     "promotion": {
       "badge": "PROMOTION",
       "title": "Get a Sparkling Clean Home At a Special Price!",
@@ -215,56 +267,90 @@
     "description": "Automatically calculate estimated costs based on property type and additional services. Special requirements will be quoted by our team after submission.",
     "step1": {
       "title": "Step 1: Select Property Type",
-      "placeholder": "Please select property type"
+      "placeholder": "Please select property type",
+      "options": {
+        "studio": {
+          "label": "Studio",
+          "meta": "$180"
+        },
+        "1b1b": {
+          "label": "1B1B (1 bed 1 bath)",
+          "meta": "$230"
+        },
+        "2b1b": {
+          "label": "2B1B (2 bed 1 bath)",
+          "meta": "$260"
+        },
+        "2b2b": {
+          "label": "2B2B (2 bed 2 bath)",
+          "meta": "$320"
+        },
+        "3b1b": {
+          "label": "3B1B (3 bed 1 bath)",
+          "meta": "$360"
+        },
+        "3b2b": {
+          "label": "3B2B (3 bed 2 bath)",
+          "meta": "$390"
+        },
+        "4b2b": {
+          "label": "4B2B (4 bed 2 bath)",
+          "meta": "$420"
+        }
+      }
     },
     "step2": {
       "title": "Step 2: Additional Services (Multiple Selection)",
-      "carpet": {
-        "title": "Steam Deep Cleaning",
-        "description": "$70 / location"
-      },
-      "windows": {
-        "title": "Window Deep Cleaning",
-        "description": "$15 / window"
-      },
-      "oven": {
-        "title": "Oven Deep Cleaning",
-        "description": "$50 / unit"
-      },
-      "microwave": {
-        "title": "Microwave Deep Cleaning",
-        "description": "$25 / unit"
-      },
-      "dishwasher": {
-        "title": "Dishwasher Deep Cleaning",
-        "description": "$25 / unit"
-      },
-      "fridge": {
-        "title": "Fridge Deep Cleaning",
-        "description": "$50 / unit"
-      },
-      "balcony": {
-        "title": "Balcony Additional Cleaning",
-        "description": "$50 / unit"
-      },
-      "extraRoom": {
-        "title": "Extra Bathroom / Living Room",
-        "description": "$30 / room"
+      "options": {
+        "carpet": {
+          "title": "Steam Deep Cleaning",
+          "description": "$70 / location"
+        },
+        "windows": {
+          "title": "Window Deep Cleaning",
+          "description": "$15 / window"
+        },
+        "oven": {
+          "title": "Oven Deep Cleaning",
+          "description": "$50 / unit"
+        },
+        "microwave": {
+          "title": "Microwave Deep Cleaning",
+          "description": "$25 / unit"
+        },
+        "dishwasher": {
+          "title": "Dishwasher Deep Cleaning",
+          "description": "$25 / unit"
+        },
+        "fridge": {
+          "title": "Fridge Deep Cleaning",
+          "description": "$50 / unit"
+        },
+        "balcony": {
+          "title": "Balcony Additional Cleaning",
+          "description": "$50 / unit"
+        },
+        "extra-room": {
+          "title": "Extra Bathroom / Living Room",
+          "description": "$30 / room"
+        }
       }
     },
     "step3": {
       "title": "Step 3: Special Items (Manual Quoting Required)",
-      "wallStain": {
-        "title": "Wall Special Stains",
-        "description": "Manual quote required (reference $30 / location)"
-      },
-      "floorStain": {
-        "title": "Floor Special Stains",
-        "description": "Manual quote required (reference $30 / location)"
-      },
-      "trash": {
-        "title": "Garbage Cleaning",
-        "description": "Manual quote required (reference $10 / bag)"
+      "options": {
+        "wall-stain": {
+          "title": "Wall Special Stains",
+          "description": "Manual quote required (reference $30 / location)"
+        },
+        "floor-stain": {
+          "title": "Floor Special Stains",
+          "description": "Manual quote required (reference $30 / location)"
+        },
+        "trash": {
+          "title": "Garbage Cleaning",
+          "description": "Manual quote required (reference $10 / bag)"
+        }
       }
     },
     "summary": {
@@ -272,6 +358,7 @@
       "selected": "Currently selected: {property}",
       "note1": "This amount is for reference only. Actual costs will be determined by on-site inspection.",
       "note2": "If you have other requirements, please specify in the notes for a custom quote.",
+      "unselected": "No property selected",
       "bookNow": "Book Cleaning"
     }
   },

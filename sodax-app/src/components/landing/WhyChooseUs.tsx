@@ -1,7 +1,9 @@
 import React from 'react';
+import { useTranslations } from 'next-intl';
 
-const featureItems = [
+const features = [
   {
+    key: 'ecoFriendly',
     icon: (
       <svg
         width="24"
@@ -26,10 +28,9 @@ const featureItems = [
         />
       </svg>
     ),
-    title: 'Eco-Friendly Products',
-    description: 'We use non-toxic, biodegradable cleaning products that are safe for your family, pets, and the planet.',
   },
   {
+    key: 'onTime',
     icon: (
       <svg
         width="24"
@@ -54,10 +55,9 @@ const featureItems = [
         />
       </svg>
     ),
-    title: 'On-Time Service',
-    description: 'We respect your time. Our team arrives promptly and works efficiently to deliver a spotless home on schedule.',
   },
   {
+    key: 'professionals',
     icon: (
       <svg
         width="24"
@@ -75,10 +75,9 @@ const featureItems = [
         />
       </svg>
     ),
-    title: 'Trained Professionals',
-    description: 'Our team is fully trained, vetted, and insured, ensuring you receive a professional and trustworthy service.',
   },
   {
+    key: 'guarantee',
     icon: (
       <svg
         width="24"
@@ -103,12 +102,10 @@ const featureItems = [
         />
       </svg>
     ),
-    title: 'Satisfaction Guarantee',
-    description: 'Your satisfaction is our priority. If you\'re not happy, we\'ll come back and make it right.',
   },
-];
+] as const;
 
-const FeatureCard = ({ icon, title, description }: (typeof featureItems)[0]) => (
+const FeatureCard = ({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) => (
   <div className="flex items-start space-x-4">
     <div className="flex-shrink-0 w-12 h-12 bg-white rounded-full flex items-center justify-center">
       {icon}
@@ -121,26 +118,29 @@ const FeatureCard = ({ icon, title, description }: (typeof featureItems)[0]) => 
 );
 
 const WhyChooseUs = () => {
+  const t = useTranslations('Home.whyChooseUs');
+
   return (
     <section className="bg-primary-blue-lightest py-20 px-6">
       <div className="container mx-auto bg-primary-blue-lightest p-20 rounded-2xl flex flex-col lg:flex-row items-center gap-16">
         {/* Left Side: Heading */}
         <div className="lg:w-1/3 text-center lg:text-left">
           <span className="inline-block bg-white text-primary-dark-blue text-sm font-medium px-4 py-1.5 rounded-full mb-4">
-            WHY CHOOSE US
+            {t('badge')}
           </span>
-          <h2 className="text-4xl font-semibold text-base-black leading-tight">
-            Why Qlinest Is the Right Choice for Quality
-          </h2>
-          <p className="mt-4 text-base-black">
-            Discover a range of services designed to bring comfort
-          </p>
+          <h2 className="text-4xl font-semibold text-base-black leading-tight">{t('title')}</h2>
+          <p className="mt-4 text-base-black">{t('subtitle')}</p>
         </div>
 
         {/* Right Side: Features Grid */}
         <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-          {featureItems.map((item, index) => (
-            <FeatureCard key={index} {...item} />
+          {features.map((item) => (
+            <FeatureCard
+              key={item.key}
+              icon={item.icon}
+              title={t(`features.${item.key}.title`)}
+              description={t(`features.${item.key}.description`)}
+            />
           ))}
         </div>
       </div>

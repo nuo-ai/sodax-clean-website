@@ -41,23 +41,23 @@ export function PriceSummary({
   onAction,
   actionLabel = '立即預訂',
 }: PriceSummaryProps) {
-  const content = (
+  const actionButton = actionHref ? (
+    <Button className="w-full" asChild>
+      <Link href={actionHref}>{actionLabel}</Link>
+    </Button>
+  ) : (
+    <Button className="w-full" type="button" onClick={onAction}>
+      {actionLabel}
+    </Button>
+  )
+
+  return (
     <div className="sticky bottom-0 w-full rounded-t-lg bg-white p-6 shadow-overlay md:top-10 md:rounded-lg">
       <div className="flex flex-col gap-2">
         <span className="text-body-md text-grayscale-500">{label}</span>
         <div className="text-heading-lg font-bold text-primary-500">{total}</div>
       </div>
-      <div className="mt-4">
-        <Button className="w-full" onClick={actionHref ? undefined : onAction}>
-          {actionLabel}
-        </Button>
-      </div>
+      <div className="mt-4">{actionButton}</div>
     </div>
   )
-
-  if (actionHref) {
-    return <Link href={actionHref}>{content}</Link>
-  }
-
-  return content
 }

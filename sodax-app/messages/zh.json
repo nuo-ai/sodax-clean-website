@@ -60,6 +60,58 @@
         }
       ]
     },
+    "aboutUs": {
+      "badge": "關於我們",
+      "heading": {
+        "title": "深受上千家庭信賴",
+        "description": "我們相信乾淨的家能創造更好的生活空間。從日常維護到細緻深層清潔，每個角落都以細心、專業與環保方案打理。"
+      },
+      "video": {
+        "alt": "清潔服務實景",
+        "ariaLabel": "播放品牌介紹影片"
+      },
+      "stats": {
+        "homesCleaned": {
+          "value": "1,200+",
+          "label": "完成清潔"
+        },
+        "customerSatisfaction": {
+          "value": "98%",
+          "label": "顧客滿意度"
+        },
+        "averageRating": {
+          "value": "4.9/5",
+          "label": "平均評分"
+        },
+        "yearsExperience": {
+          "value": "5+",
+          "label": "服務年資"
+        }
+      }
+    },
+    "whyChooseUs": {
+      "badge": "為何選擇我們",
+      "title": "為何 Qlinest 是品質首選",
+      "subtitle": "多元服務一次滿足，讓居家更舒適。",
+      "features": {
+        "ecoFriendly": {
+          "title": "環保安全清潔用品",
+          "description": "採用無毒、可生物分解的清潔產品，守護家人與寵物健康，也友善環境。"
+        },
+        "onTime": {
+          "title": "準時到府服務",
+          "description": "珍惜您的時間，團隊準時抵達並有效率完成，準備好一個潔淨的家。"
+        },
+        "professionals": {
+          "title": "專業培訓團隊",
+          "description": "成員皆經過完整培訓、背景審核與保險，提供值得信賴的專業服務。"
+        },
+        "guarantee": {
+          "title": "滿意保證",
+          "description": "以您的滿意為優先，如有任何不滿意，我們會盡快回訪處理。"
+        }
+      }
+    },
     "promotion": {
       "badge": "限時優惠",
       "title": "限時優惠，打造閃亮居家！",
@@ -215,56 +267,90 @@
     "description": "根據房型與需要的額外服務，自動計算預估費用。特殊需求會在提交後由專人聯繫提供正式報價。",
     "step1": {
       "title": "步驟 1：選擇房型",
-      "placeholder": "請選擇房型"
+      "placeholder": "請選擇房型",
+      "options": {
+        "studio": {
+          "label": "開放式套房",
+          "meta": "$180"
+        },
+        "1b1b": {
+          "label": "1 臥 1 衛",
+          "meta": "$230"
+        },
+        "2b1b": {
+          "label": "2 臥 1 衛",
+          "meta": "$260"
+        },
+        "2b2b": {
+          "label": "2 臥 2 衛",
+          "meta": "$320"
+        },
+        "3b1b": {
+          "label": "3 臥 1 衛",
+          "meta": "$360"
+        },
+        "3b2b": {
+          "label": "3 臥 2 衛",
+          "meta": "$390"
+        },
+        "4b2b": {
+          "label": "4 臥 2 衛",
+          "meta": "$420"
+        }
+      }
     },
     "step2": {
       "title": "步驟 2：額外項目（可複選）",
-      "carpet": {
-        "title": "蒸汽深度清潔",
-        "description": "$70 / 處"
-      },
-      "windows": {
-        "title": "門窗深度清潔",
-        "description": "$15 / 扇"
-      },
-      "oven": {
-        "title": "烤箱深度清潔",
-        "description": "$50 / 個"
-      },
-      "microwave": {
-        "title": "微波爐深度清潔",
-        "description": "$25 / 個"
-      },
-      "dishwasher": {
-        "title": "洗碗機深度清潔",
-        "description": "$25 / 個"
-      },
-      "fridge": {
-        "title": "冰箱深度清潔",
-        "description": "$50 / 個"
-      },
-      "balcony": {
-        "title": "陽台額外清潔",
-        "description": "$50 / 個"
-      },
-      "extraRoom": {
-        "title": "額外衛浴 / 客廳",
-        "description": "$30 / 間"
+      "options": {
+        "carpet": {
+          "title": "蒸汽深度清潔",
+          "description": "$70 / 處"
+        },
+        "windows": {
+          "title": "門窗深度清潔",
+          "description": "$15 / 扇"
+        },
+        "oven": {
+          "title": "烤箱深度清潔",
+          "description": "$50 / 個"
+        },
+        "microwave": {
+          "title": "微波爐深度清潔",
+          "description": "$25 / 個"
+        },
+        "dishwasher": {
+          "title": "洗碗機深度清潔",
+          "description": "$25 / 個"
+        },
+        "fridge": {
+          "title": "冰箱深度清潔",
+          "description": "$50 / 個"
+        },
+        "balcony": {
+          "title": "陽台額外清潔",
+          "description": "$50 / 個"
+        },
+        "extra-room": {
+          "title": "額外衛浴 / 客廳",
+          "description": "$30 / 間"
+        }
       }
     },
     "step3": {
       "title": "步驟 3：特殊項目（需人工報價）",
-      "wallStain": {
-        "title": "牆面特殊污漬",
-        "description": "需人工報價（參考 $30 / 處）"
-      },
-      "floorStain": {
-        "title": "地面特殊污漬",
-        "description": "需人工報價（參考 $30 / 處）"
-      },
-      "trash": {
-        "title": "生活垃圾清潔",
-        "description": "需人工報價（參考 $10 / 袋）"
+      "options": {
+        "wall-stain": {
+          "title": "牆面特殊污漬",
+          "description": "需人工報價（參考 $30 / 處）"
+        },
+        "floor-stain": {
+          "title": "地面特殊污漬",
+          "description": "需人工報價（參考 $30 / 處）"
+        },
+        "trash": {
+          "title": "生活垃圾清潔",
+          "description": "需人工報價（參考 $10 / 袋）"
+        }
       }
     },
     "summary": {
@@ -272,6 +358,7 @@
       "selected": "目前選擇：{property}",
       "note1": "此金額僅供參考，實際費用以現場勘查為準。",
       "note2": "若有其他需求，請於備註中說明，我們將提供客製報價。",
+      "unselected": "尚未選擇房型",
       "bookNow": "預約清潔"
     }
   },
