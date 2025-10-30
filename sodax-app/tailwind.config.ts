@@ -18,18 +18,11 @@ const config: Config = {
       colors: {
         primary: colors.primary,
         neutral: colors.neutral,
+        base: colors.base,
+        accent: colors.accent,
         success: colors.success,
         error: colors.error,
         warning: colors.warning,
-
-        // Figma 品牌色（扁平鍵名，便於直接使用如 bg-primary-dark-blue）
-        'primary-dark-blue': colors.primaryDarkBlue,
-        'primary-blue-light': colors.primaryBlueLight,
-        'primary-blue-lightest': colors.primaryBlueLightest,
-        'accent-yellow': colors.accentYellow,
-        'base-black': colors.baseBlack,
-        'base-gray': colors.baseGray,
-        'white-stroke': colors.whiteStroke,
       },
       fontFamily: {
         sans: sansFontFamily,

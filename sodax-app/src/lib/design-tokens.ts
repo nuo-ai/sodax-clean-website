@@ -4,23 +4,25 @@
  * 可根據 Figma 設計稿進行更新
  */
 
-// 顏色系統 (Color System)
+// 顏色系統 (Color System) - Aligned with Figma
 export const colors = {
-  // 主色調 - 清新藍綠色系
+  // 主色 (Primary)
   primary: {
-    50: '#f0fdfa',
-    100: '#ccfbf1', 
-    200: '#99f6e4',
-    300: '#5eead4',
-    400: '#2dd4bf',
-    500: '#14b8a6', // 主品牌色
-    600: '#0d9488',
-    700: '#0f766e',
-    800: '#115e59',
-    900: '#134e4a',
+    lightest: '#ECF4E9',
+    light: '#B2EAFE',
+    DEFAULT: '#1F77D6', // Dark-Blue as default
   },
 
-  // 中性色調 - 專業灰色系
+  // 基礎色 (Base)
+  base: {
+    white: '#FFFFFF',
+    whiteBg: '#FAFAFA',
+    stroke: '#E3E8EF', // Using logical value from previous code
+    gray: '#677489',      // Using logical value from previous code
+    black: '#0E1109',
+  },
+
+  // 舊的中性色，如果需要可以保留
   neutral: {
     50: '#fafafa',
     100: '#f5f5f5',
@@ -33,20 +35,11 @@ export const colors = {
     800: '#262626',
     900: '#171717',
   },
-
-  // 品牌色（Figma 對齊）
-  primaryDarkBlue: '#1F77D6',
-  primaryBlueLight: '#B2EAFE',
-  primaryBlueLightest: '#EAF3FC',
-  accentYellow: '#FFD643',
-
-  // 基礎色（Figma 對齊）
-  baseBlack: '#0E1109',
-  baseGray: '#677489',
-  whiteStroke: '#E3E8EF',
-
-  // 白色系
-  white: '#ffffff',
+  
+  // 強調色 (Accent)
+  accent: {
+    yellow: '#FFD643',
+  },
   
   // 語義顏色
   success: {

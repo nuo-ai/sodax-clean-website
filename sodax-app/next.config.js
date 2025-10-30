@@ -6,7 +6,20 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
   // App Router is stable in Next.js 14.2.5
   images: {
-    domains: ['images.unsplash.com', 'randomuser.me'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'randomuser.me',
+      },
+      {
+        protocol: 'https',
+        hostname: 'source.unsplash.com',
+      },
+    ],
   },
 };
 
