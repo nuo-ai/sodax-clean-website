@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import { QuantityStepper, type QuantityStepperProps } from '../ui/QuantityStepper'
 
 /**
@@ -16,13 +15,13 @@ export interface CheckboxQuantProps {
    */
   description?: string
   /**
-   * 初始是否被選取。
+   * 是否被選取。
    */
-  defaultChecked?: boolean
+  checked: boolean
   /**
-   * 初始數量，預設為 1。
+   * 當前數量，預設建議為 1。
    */
-  defaultQuantity?: number
+  quantity: number
   /**
    * 變更勾選狀態時的回呼。
    */
@@ -41,24 +40,18 @@ export interface CheckboxQuantProps {
 export function CheckboxQuant({
   title,
   description,
-  defaultChecked = false,
-  defaultQuantity = 1,
+  checked,
+  quantity,
   onCheckedChange,
   onQuantityChange,
 }: CheckboxQuantProps) {
-  const [checked, setChecked] = useState(defaultChecked)
-  const [quantity, setQuantity] = useState(defaultQuantity)
-
   const handleToggle = () => {
-    const next = !checked
-    setChecked(next)
-    onCheckedChange?.(next)
+    onCheckedChange?.(!checked)
   }
 
   const handleQuantity = (next: number) => {
-    if (next < 1) return
-    setQuantity(next)
-    onQuantityChange?.(next)
+    const value = Math.max(1, next)
+    onQuantityChange?.(value)
   }
 
   const stepperProps: QuantityStepperProps = {

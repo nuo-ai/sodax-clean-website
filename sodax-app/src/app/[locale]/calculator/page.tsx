@@ -22,44 +22,46 @@ type AddOnKey =
 
 type SpecialKey = 'wall-stain' | 'floor-stain' | 'trash'
 
-interface AddOnOption {
-  key: AddOnKey
-  title: string
-  description: string
+type BaseConfig = {
+  value: BaseOption['value']
+  translationKey: string
   price: number
 }
 
-interface SpecialOption {
-  key: SpecialKey
-  title: string
-  description: string
+type AddOnConfig = {
+  key: AddOnKey
+  price: number
 }
 
-const BASE_OPTIONS: BaseOption[] = [
-  { value: 'studio', label: 'Studio', meta: '$180', price: 180 },
-  { value: '1b1b', label: '1B1B（1臥1衛）', meta: '$230', price: 230 },
-  { value: '2b1b', label: '2B1B（2臥1衛）', meta: '$260', price: 260 },
-  { value: '2b2b', label: '2B2B（2臥2衛）', meta: '$320', price: 320 },
-  { value: '3b1b', label: '3B1B（3臥1衛）', meta: '$360', price: 360 },
-  { value: '3b2b', label: '3B2B（3臥2衛）', meta: '$390', price: 390 },
-  { value: '4b2b', label: '4B2B（4臥2衛）', meta: '$420', price: 420 },
+type SpecialConfig = {
+  key: SpecialKey
+}
+
+const BASE_OPTION_CONFIG: BaseConfig[] = [
+  { value: 'studio', translationKey: 'studio', price: 180 },
+  { value: '1b1b', translationKey: '1b1b', price: 230 },
+  { value: '2b1b', translationKey: '2b1b', price: 260 },
+  { value: '2b2b', translationKey: '2b2b', price: 320 },
+  { value: '3b1b', translationKey: '3b1b', price: 360 },
+  { value: '3b2b', translationKey: '3b2b', price: 390 },
+  { value: '4b2b', translationKey: '4b2b', price: 420 },
 ]
 
-const ADD_ON_OPTIONS: AddOnOption[] = [
-  { key: 'carpet', title: '蒸汽深度清潔', description: '$70 / 處', price: 70 },
-  { key: 'windows', title: '門窗深度清潔', description: '$15 / 扇', price: 15 },
-  { key: 'oven', title: '烤箱深度清潔', description: '$50 / 個', price: 50 },
-  { key: 'microwave', title: '微波爐深度清潔', description: '$25 / 個', price: 25 },
-  { key: 'dishwasher', title: '洗碗機深度清潔', description: '$25 / 個', price: 25 },
-  { key: 'fridge', title: '冰箱深度清潔', description: '$50 / 個', price: 50 },
-  { key: 'balcony', title: '陽台額外清潔', description: '$50 / 個', price: 50 },
-  { key: 'extra-room', title: '額外衛浴 / 客廳', description: '$30 / 間', price: 30 },
+const ADD_ON_CONFIG: AddOnConfig[] = [
+  { key: 'carpet', price: 70 },
+  { key: 'windows', price: 15 },
+  { key: 'oven', price: 50 },
+  { key: 'microwave', price: 25 },
+  { key: 'dishwasher', price: 25 },
+  { key: 'fridge', price: 50 },
+  { key: 'balcony', price: 50 },
+  { key: 'extra-room', price: 30 },
 ]
 
-const SPECIAL_OPTIONS: SpecialOption[] = [
-  { key: 'wall-stain', title: '牆面特殊污漬', description: '需人工報價（參考 $30 / 處）' },
-  { key: 'floor-stain', title: '地面特殊污漬', description: '需人工報價（參考 $30 / 處）' },
-  { key: 'trash', title: '生活垃圾清潔', description: '需人工報價（參考 $10 / 袋）' },
+const SPECIAL_CONFIG: SpecialConfig[] = [
+  { key: 'wall-stain' },
+  { key: 'floor-stain' },
+  { key: 'trash' },
 ]
 
 type AddOnState = Record<AddOnKey, { selected: boolean; quantity: number }>
@@ -70,23 +72,23 @@ type SpecialState = Record<SpecialKey, boolean>
  * 即時計算退租清潔的預估總價。
  */
 export default function CalculatorPage(): JSX.Element {
-  const [selectedBase, setSelectedBase] = useState<string>(BASE_OPTIONS[0].value)
+  const [selectedBase, setSelectedBase] = useState<string>(BASE_OPTION_CONFIG[0].value)
   const [addOns, setAddOns] = useState<AddOnState>(() =>
-    ADD_ON_OPTIONS.reduce<AddOnState>((acc, option) => {
+    ADD_ON_CONFIG.reduce<AddOnState>((acc, option) => {
       acc[option.key] = { selected: false, quantity: 1 }
       return acc
     }, {} as AddOnState),
   )
   const [specials, setSpecials] = useState<SpecialState>(() =>
-    SPECIAL_OPTIONS.reduce<SpecialState>((acc, option) => {
+    SPECIAL_CONFIG.reduce<SpecialState>((acc, option) => {
       acc[option.key] = false
       return acc
     }, {} as SpecialState),
   )
 
   const totalPrice = useMemo(() => {
-    const basePrice = BASE_OPTIONS.find((option) => option.value === selectedBase)?.price ?? 0
-    const addOnTotal = ADD_ON_OPTIONS.reduce((sum, option) => {
+    const basePrice = BASE_OPTION_CONFIG.find((option) => option.value === selectedBase)?.price ?? 0
+    const addOnTotal = ADD_ON_CONFIG.reduce((sum, option) => {
       const state = addOns[option.key]
       if (!state?.selected) return sum
       return sum + option.price * state.quantity
@@ -94,8 +96,26 @@ export default function CalculatorPage(): JSX.Element {
     return basePrice + addOnTotal
   }, [addOns, selectedBase])
 
-  const selectedBaseOption = BASE_OPTIONS.find((option) => option.value === selectedBase)
   const t = useTranslations('Calculator')
+  const baseOptions: BaseOption[] = BASE_OPTION_CONFIG.map((option) => ({
+    value: option.value,
+    label: t(`step1.options.${option.translationKey}.label`),
+    meta: t(`step1.options.${option.translationKey}.meta`),
+    price: option.price,
+  }))
+  const addOnOptions = ADD_ON_CONFIG.map((option) => ({
+    key: option.key,
+    title: t(`step2.options.${option.key}.title`),
+    description: t(`step2.options.${option.key}.description`),
+    price: option.price,
+  }))
+  const specialOptions = SPECIAL_CONFIG.map((option) => ({
+    key: option.key,
+    title: t(`step3.options.${option.key}.title`),
+    description: t(`step3.options.${option.key}.description`),
+  }))
+
+  const selectedBaseOption = baseOptions.find((option) => option.value === selectedBase)
 
   return (
     <main className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-12 md:flex-row lg:gap-12">
@@ -112,7 +132,7 @@ export default function CalculatorPage(): JSX.Element {
           <CalculatorStep index={1} title={t('step1.title')}>
             <Dropdown
               placeholder={t('step1.placeholder')}
-              options={BASE_OPTIONS}
+              options={baseOptions}
               selectedValue={selectedBase}
               onSelect={(option) => setSelectedBase(option.value)}
             />
@@ -120,13 +140,13 @@ export default function CalculatorPage(): JSX.Element {
 
           <CalculatorStep index={2} title={t('step2.title')}>
             <div className="grid gap-4 md:grid-cols-2">
-              {ADD_ON_OPTIONS.map((option) => (
+              {addOnOptions.map((option) => (
                 <CheckboxQuant
                   key={option.key}
-                  title={t(`step2.${option.key}.title`)}
-                  description={t(`step2.${option.key}.description`)}
-                  defaultChecked={addOns[option.key].selected}
-                  defaultQuantity={addOns[option.key].quantity}
+                  title={option.title}
+                  description={option.description}
+                  checked={addOns[option.key].selected}
+                  quantity={addOns[option.key].quantity}
                   onCheckedChange={(checked) =>
                     setAddOns((prev) => ({
                       ...prev,
@@ -152,12 +172,12 @@ export default function CalculatorPage(): JSX.Element {
 
           <CalculatorStep index={3} title={t('step3.title')}>
             <div className="grid gap-4 md:grid-cols-2">
-              {SPECIAL_OPTIONS.map((option) => (
+              {specialOptions.map((option) => (
                 <CheckboxSimple
                   key={option.key}
-                  title={t(`step3.${option.key}.title`)}
-                  description={t(`step3.${option.key}.description`)}
-                  defaultChecked={specials[option.key]}
+                  title={option.title}
+                  description={option.description}
+                  checked={specials[option.key]}
                   onCheckedChange={(checked) =>
                     setSpecials((prev) => ({
                       ...prev,
@@ -179,9 +199,7 @@ export default function CalculatorPage(): JSX.Element {
           actionLabel={t('summary.bookNow')}
         />
         <div className="mt-6 space-y-2 rounded-lg border border-grayscale-200 p-4 text-body-sm text-grayscale-600">
-          <p>
-            {t('summary.selected', { property: selectedBaseOption?.label ?? '未選擇房型' })}。{t('summary.note2')}
-          </p>
+          <p>{t('summary.selected', { property: selectedBaseOption?.label ?? t('summary.unselected') })}</p>
           <ul className="list-disc pl-5">
             <li>{t('summary.note1')}</li>
             <li>{t('summary.note2')}</li>

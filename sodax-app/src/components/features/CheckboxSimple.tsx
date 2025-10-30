@@ -1,7 +1,5 @@
 'use client'
 
-import { useState } from 'react'
-
 /**
  * CheckboxSimpleProps 定義無數量調整的勾選項目。
  */
@@ -15,9 +13,9 @@ export interface CheckboxSimpleProps {
    */
   description?: string
   /**
-   * 初始是否勾選。
+   * 是否勾選。
    */
-  defaultChecked?: boolean
+  checked: boolean
   /**
    * 勾選狀態改變時的回呼。
    */
@@ -31,15 +29,11 @@ export interface CheckboxSimpleProps {
 export function CheckboxSimple({
   title,
   description,
-  defaultChecked = false,
+  checked,
   onCheckedChange,
 }: CheckboxSimpleProps) {
-  const [checked, setChecked] = useState(defaultChecked)
-
   const handleToggle = () => {
-    const next = !checked
-    setChecked(next)
-    onCheckedChange?.(next)
+    onCheckedChange?.(!checked)
   }
 
   return (

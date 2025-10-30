@@ -1,10 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { cn } from '@/lib/utils';
-import {useTranslations, useLocale} from 'next-intl';
-import {useRouter} from 'next/navigation';
+import { useTranslations, useLocale } from 'next-intl';
+import { useRouter } from 'next/navigation';
 
 /**
  * 導航頭組件 (Header Component)
@@ -32,9 +33,13 @@ export function Header({ className }: HeaderProps) {
   const handleToggleLocale = async () => {
     const next = locale === 'en' ? 'zh' : 'en';
     try {
-      await fetch(`/api/locale?locale=${next}`, { method: 'POST' });
+      const response = await fetch(`/api/locale?locale=${next}`, { method: 'POST' });
+      if (!response.ok) {
+        throw new Error('Failed to persist locale');
+      }
       router.refresh();
     } catch (e) {
+      console.error(e);
       // 回退刷新
       window.location.reload();
     }
@@ -62,13 +67,13 @@ export function Header({ className }: HeaderProps) {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.key}
                   href={item.href}
                   className="text-neutral-700 hover:text-primary-dark-blue px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
                 >
                   {t(`Nav.${item.key}`)}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -125,14 +130,14 @@ export function Header({ className }: HeaderProps) {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-neutral-200 mt-2">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.key}
                   href={item.href}
                   className="text-neutral-700 hover:text-primary-dark-blue hover:bg-neutral-50 block px-3 py-2 rounded-md text-base font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {t(`Nav.${item.key}`)}
-                </a>
+                </Link>
               ))}
 
               {/* Mobile Language Toggle */}
